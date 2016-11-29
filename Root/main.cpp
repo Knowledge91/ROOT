@@ -12,6 +12,7 @@ double RosenBrock(const double *xx )
 
 int main()
 {
+    
     // Choose method upon creation between:
     // kMigrad, kSimplex, kCombined,
     // kScan, kFumili
