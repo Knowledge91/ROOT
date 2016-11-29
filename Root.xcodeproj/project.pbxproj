@@ -171,6 +171,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
 			name = Debug;
 		};
@@ -217,16 +218,74 @@
 		D4A2CE461DE5B25B00DFDE93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEVELOPMENT_TEAM = 96KFLNV49G;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-L/opt/local/libexec/root6/lib/root",
+					"-lCore",
+					"-lRIO",
+					"-lNet",
+					"-lHist",
+					"-lGraf",
+					"-lGraf3d",
+					"-lGpad",
+					"-lTree",
+					"-lRint",
+					"-lPostscript",
+					"-lMatrix",
+					"-lPhysics",
+					"-lMathCore",
+					"-lThread",
+					"-lMultiProc",
+					"-lpthread",
+					"-Wl,-rpath,/opt/local/libexec/root6/lib/root",
+					"-stdlib=libc++",
+					"-lm",
+					"-ldl",
+					"-lMinuit2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /opt/local/libexec/root6/include/root;
 			};
 			name = Debug;
 		};
 		D4A2CE471DE5B25B00DFDE93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEVELOPMENT_TEAM = 96KFLNV49G;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"//:configuration",
+					"=",
+					"Debug\nOTHER_LDFLAGS[arch=*]",
+					"=",
+					"-L/opt/local/libexec/root6/lib/root",
+					"-lCore",
+					"-lRIO",
+					"-lNet",
+					"-lHist",
+					"-lGraf",
+					"-lGraf3d",
+					"-lGpad",
+					"-lTree",
+					"-lRint",
+					"-lPostscript",
+					"-lMatrix",
+					"-lPhysics",
+					"-lMathCore",
+					"-lThread",
+					"-lMultiProc",
+					"-lpthread",
+					"-Wl,-rpath,/opt/local/libexec/root6/lib/root",
+					"-stdlib=libc++",
+					"-lm",
+					"-ldl\n\n//:completeSettings",
+					"=",
+					"none
+",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "//:configuration = Debug\nUSER_HEADER_SEARCH_PATHS[arch=*] = /opt/local/libexec/root6/include/root\n\n//:completeSettings = none\n";
 			};
 			name = Release;
 		};
@@ -249,6 +308,7 @@
 				D4A2CE471DE5B25B00DFDE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
